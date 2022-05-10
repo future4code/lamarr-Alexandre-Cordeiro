@@ -122,14 +122,18 @@ function retornaPessoaAnonimizada(pessoa) {
    return {...pessoa, nome: "ANÔNIMO"}
 }
 
+const temPermissao = (pessoa) => {
+    if(pessoa.altura >=  1.5 && pessoa.idade > 14 && pessoa.idade < 60) return true
+    else return false
+}
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+    return pessoas.filter(temPermissao)
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+    return pessoas.filter(item => !temPermissao(item))
 }
 
 // EXERCÍCIO 14

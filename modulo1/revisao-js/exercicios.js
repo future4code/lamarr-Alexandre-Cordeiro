@@ -50,7 +50,11 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    const pares = []
+    for (const item of array) {
+        if(item % 2 === 0) pares.push(item * item) 
+    }
+    return pares
 }
 
 // EXERCÍCIO 06

@@ -59,12 +59,15 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+    let maior = array[0]
+    array.map(item => {
+        if(item > maior) maior = item
+    })
+    return maior
 }
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-
 }
 
 // EXERCÍCIO 08
